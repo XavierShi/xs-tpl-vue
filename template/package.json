@@ -5,7 +5,7 @@
   "author": "{{ author }}",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --inline --progress --host 0.0.0.0 --config build/webpack.dev.conf.js",
+    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     {{#if_eq runner "jest"}}
     "unit": "jest --config test/unit/jest.conf.js --coverage",
@@ -25,15 +25,8 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "axios": "^0.18.0",
-    "better-scroll": "^1.8.4",
-    "fastclick": "^1.0.6",
-    "good-storage": "^1.0.1",
-    "ionicons": "^3.0.0"{{#jquery}},
-    "jquery": "^3.3.1"{{/jquery}},
     "vue": "^2.5.2"{{#router}},
-    "vue-router": "^3.0.1"{{/router}},
-    "vuex": "^3.0.1",
+    "vue-router": "^3.0.1"{{/router}}
   },
   "devDependencies": {
     {{#lint}}
@@ -89,8 +82,6 @@
     "nightwatch": "^0.9.12",
     "selenium-server": "^3.0.1",
     {{/e2e}}
-    "stylus": "^0.54.5",
-    "stylus-loader": "^3.0.2",
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.22.1",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",
