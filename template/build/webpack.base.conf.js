@@ -38,6 +38,15 @@ module.exports = {
       'vue$': 'vue/dist/vue.esm.js',
       {{/if_eq}}
       '@': resolve('src'),
+      'api': resolve('src/api'),
+      'assets': resolve('src/assets'),
+      'base': resolve('src/base'),
+      'common': resolve('src/common'),
+      'components': resolve('src/components'),
+      'router': resolve('src/router'),
+      'store': resolve('src/store'),
+      'utils': resolve('src/utils'),
+      'views': resolve('src/views')
     }
   },
   module: {
@@ -81,6 +90,14 @@ module.exports = {
       }
     ]
   },
+  plugins: [
+    new webpack.ProvidePlugin({
+      storage: "good-storage",
+      axios: "axios"{{#jquery}},
+      jquery: "jquery",
+      $: "jquery"{{/jquery}}
+    })
+  ],
   node: {
     // prevent webpack from injecting useless setImmediate polyfill because Vue
     // source contains it (although only uses it if it's native).

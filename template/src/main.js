@@ -8,7 +8,11 @@ import App from './App'
 import router from './router'
 {{/router}}
 
+
 Vue.config.productionTip = false
+
+//  引入vuex
+import store from "@/store";
 
 /* eslint-disable no-new */
 new Vue({
@@ -16,6 +20,7 @@ new Vue({
   {{#router}}
   router,
   {{/router}}
+  store,
   {{#if_eq build "runtime"}}
   render: h => h(App)
   {{/if_eq}}

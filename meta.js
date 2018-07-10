@@ -74,6 +74,11 @@ module.exports = {
       type: 'confirm',
       message: 'Install vue-router?',
     },
+    jquery: {
+      when: 'isNotTest',
+      type: 'confirm',
+      message: 'Install jquery?',
+    },
     lint: {
       when: 'isNotTest',
       type: 'confirm',
