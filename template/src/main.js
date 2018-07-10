@@ -5,6 +5,7 @@
 import Vue from 'vue'
 import App from './App'
 
+import "fa-reset"
 import FastClick from 'fastclick'
 FastClick.attach(document.body)
 
