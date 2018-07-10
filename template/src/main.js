@@ -4,9 +4,31 @@
 {{/if_eq}}
 import Vue from 'vue'
 import App from './App'
+
+import FastClick from 'fastclick'
+FastClick.attach(document.body)
+
 {{#router}}
 import router from './router'
+
+router.beforeEach(function (to, from, next) {
+  next();
+});
+
+router.afterEach(function (to, from) {});
 {{/router}}
+
+import {AlertPlugin, ConfirmPlugin, DatetimePlugin, LoadingPlugin, ToastPlugin} from 'vux'
+import 'vux/src/styles/1px.less'
+import 'vux/src/styles/close.less'
+
+Vue.use(AlertPlugin)
+Vue.use(ToastPlugin)
+Vue.use(ConfirmPlugin)
+Vue.use(LoadingPlugin)
+Vue.use(DatetimePlugin)
+
+import 'base/rem'
 
 
 Vue.config.productionTip = false
