@@ -37,7 +37,9 @@
     {{#router}}
     "vue-router": "^3.0.1",
     {{/router}}
-    "vuex": "^3.0.1"
+    "vuex": "^3.0.1",
+    "vux": "^2.9.2",
+    "vux-loader": "^1.2.1"
   },
   "devDependencies": {
     {{#lint}}
@@ -110,6 +112,8 @@
     "friendly-errors-webpack-plugin": "^1.6.1",
     "html-webpack-plugin": "^2.30.1",
     "webpack-bundle-analyzer": "^2.9.0",
+    "less": "^2.7.3",
+    "less-loader": "^4.1.0",
     "node-notifier": "^5.1.2",
     "postcss-import": "^11.0.0",
     "postcss-loader": "^2.0.8",

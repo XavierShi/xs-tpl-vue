@@ -94,9 +94,11 @@ module.exports = {
   plugins: [
     new webpack.ProvidePlugin({
       storage: "good-storage",
-      axios: "axios"{{#jquery}},
+      axios: "axios",
+      {{#jquery}}
       jquery: "jquery",
-      $: "jquery"{{/jquery}}
+      $: "jquery"
+      {{/jquery}}
     })
   ],
   node: {
