@@ -1,0 +1,22 @@
+{
+  "name": "xs-tpl-vue",
+  "version": "1.0.0",
+  "description": "A template for vue. This includes phone-vux、phone-vant、pc-element、pc-iview.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XavierShi/xs-tpl-vue.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/XavierShi/xs-tpl-vue/issues"
+  },
+  "homepage": "https://github.com/XavierShi/xs-tpl-vue#readme",
+  "devDependencies": {
+    "xs-cli": "^0.0.4"
+  }
+}
